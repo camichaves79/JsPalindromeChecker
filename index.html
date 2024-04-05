@@ -4,32 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Palindrome Checker</title>
 </head>
 
-<body>
-    <div id="viewport">
-        <div id="left-space"></div>
-        <div id="center-piece">
-            <div id="banner"></div>
-            <div id="question"></div>
+<body style='background-color:black;'>
+    <div id="viewport" class="w-screen h-screen flex justify-center align-middle items-center shrink">
+        <div id="center-piece" class="size-full md:size-auto max-w-96 overflow-auto">
+            <div id="banner" class="shrink"><img src="./images/Palindrome Checker.png"
+                    alt="Javascript palindrome chacker banner" class="flex-shrink-0 sm:w-screen"></div>
+            <div id="question">
+                <h1 class="text-white text-2xl text-center font-mono">Is it a palindrome?</h1>
+            </div>
             <div id="checker">
-                <div id="instructions"><p>Enter in text to check for a palindrome:</p></div>
-                <div id="checker-input">
-                    <div id="word-text-input"><input type="text" name="word-to-check" id="word-to-check">
-                    </div>
-                    <div id="check-button"><button>Check</button></div>
+                <div id="instructions">
+                    <p class="text-white text-center font-mono">Enter in text to check for a palindrome:</p>
                 </div>
+                <div id="checker-input" class="flex flex-wrap justify-center content-center items-center p-4">
+                    <div id="word-text-input" class="p-4 min-w-48 min-h-8 font-mono"><input type="text"
+                            name="word-to-check" id="text-input" class="p-2 min-w-68 min-h-4 font-mono">
+                    </div>
+                    <div id="check-btn" class="p-4"><button
+                            class="text-white text-center font-mono border border-white px-2 py-1" onclick="check()">Check</button></div>
+                </div>
+                <div id="result" class="text-white text-center font-mono pb-8">x is a palindrome</div>
                 <div id="legend">
-                    <p>💡 A palindrome is a word or sentence that's spelled the same way both forward and backward,
+                    <p class="text-wrap bg-gray-50 p-4">💡 A palindrome is a word or sentence that's spelled the same
+                        way both forward
+                        and backward,
                         ignoring punctuation, case, and spacing.</p>
                 </div>
             </div>
-            <div id="right-space"></div>
 
         </div>
+    </div>
 </body>
 <script src="script.js"></script>
 
