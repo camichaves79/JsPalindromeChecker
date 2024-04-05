@@ -1,2 +1,2 @@
 # JsPalindromeChecker
-Web page that checks for palindromes in a string
+Web page that checks for palindromes
